@@ -1,0 +1,193 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  /* background: #fbc2eb; */
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  /* background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)); */
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  /* background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1)) */
+  }
+  .home-page {
+    min-height: 100vh;
+  }
+  .movie-card {
+    width: 150px;
+    min-width: 150px;
+    background-color: transparent !important;
+    border: none !important;
+  }
+  .movie-poster {
+    border-radius: 10px !important;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+    transition: transform 0.2s ease;
+  }
+.cast-card {
+  box-shadow: 0 4px 6px 0 rgba(22, 22, 26, 0.18) !important;
+}
+  .movie-poster:hover {
+    transform: scale(1.1);
+  }
+
+  .movie-poster:hover ~ .overlay-actions {
+    transform: scale(1.1);
+    height: 25%;
+  }
+  .movie-poster:hover ~ .card-info {
+    color: white;
+    transform: translateY(-50px);
+  }
+  .card-info {
+    transform: translateY(0px);
+  }
+  .list-card {
+    background-color: transparent !important;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13), 0 1px 2px 0 rgba(0, 0, 0, .11);
+    border-radius: 25px !important;
+  }
+  .movie-poster:hover  .actions {
+    color: white;
+    transform: translateY(-50px);
+  }
+  .actions {
+    /* display: none; */
+  }
+
+  .circle-btn {
+    width: 40px;
+    border-radius: 50% !important;
+    border-color: white !important;
+    margin: 5px;
+    background: transparent;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+  }
+  .circle-btn-sm {
+    width: 30px;
+    border-radius: 50% !important;
+    border-color: white !important;
+    margin: 5px;
+    background: transparent;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    z-index: 2;
+  }
+  .show-row-grid {
+    /* padding: 8px; */
+    /* padding-bottom: 15px; */
+    display: grid;
+    gap: 15px;
+    align-items: stretch;
+    justify-items: stretch;
+    width: 100%;
+    overflow-x: hidden;
+    grid-template-columns: repeat(7, 1fr);
+}
+.hero {
+	height: 20vh;
+	background: linear-gradient(45deg, rgba(255,175,189,.7), rgba(100,216,243,.7), rgba(234,236,198,.7), rgba(245,146,176,.7), rgba(52,219,216,.7)) 0 0 / 1000% no-repeat, url(https://picsum.photos/g/2000/1200?image=443) 0 0 / cover no-repeat;
+	-webkit-animation: gradientAnimation 40s ease infinite;
+	animation: gradientAnimation 40s ease infinite;
+}
+@-webkit-keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+@keyframes gradientAnimation {
+	0%   { background-position: 0% 30%, 0 0;}
+	50%  { background-position: 100% 70%, 0 0;}
+	100% { background-position: 0% 30%, 0 0;}
+}
+h1 {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	color: #fff;
+	font : normal 600 72px/1 'Open Sans', sans-serif;
+	text-align: center;
+	white-space: nowrap;
+}
+h1 span {
+	display: block;
+	margin-top: 1em;
+	font-size: 40px;
+	font-weight: 300;
+}
+.blur {
+  /* background: rgba(255, 255, 255, 0.2);  */
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  border-radius: 20px;
+}
+.overlay-actions {
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 999;
+  position: absolute;
+  top: 79%;
+  width: 100%;
+  height: 21%;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  justify-content: end;
+}
+.icon-red {
+  color: red;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 480px){ 
+  .movie-card {
+    width: 80px;
+    min-width: 100px;
+  }
+
+  .show-row-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.overlay-actions {
+  top: 79%
+}
+
+}
